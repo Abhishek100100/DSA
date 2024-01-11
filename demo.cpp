@@ -8,5 +8,5 @@ int main()
     int x;
     cin >> x;
     cout << "Hey Abhishek " << x;
-
+    
 }
