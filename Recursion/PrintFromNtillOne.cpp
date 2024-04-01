@@ -3,15 +3,12 @@
 using namespace std;
 
 class recursive{
-    public:
-    
+    public: 
     void WithoutLoop(int n)
     {
-        if(n>0) 
-        {
-            WithoutLoop(n-1);
-            cout << n << endl;
-        }
+        if(n==0) return;
+        WithoutLoop(n-1);
+        cout << n << endl;
     }
 };
 
@@ -24,5 +21,4 @@ int main()
     abcd.WithoutLoop(num);
     return 0;
 }
-
 
