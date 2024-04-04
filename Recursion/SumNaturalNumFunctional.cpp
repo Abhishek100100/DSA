@@ -19,5 +19,4 @@ int main()
  cin >> number;
  cout << NaturalSum(number);
  return 0;
-
 }
