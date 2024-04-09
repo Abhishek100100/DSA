@@ -1,12 +1,12 @@
 #include<bits/stdc++.h>
 #include<iostream>
 using namespace std;
-// code for merge sort
+// code for merge sort that takes array as temporary data structure instead of vector
 
 
-void Merge(int low, int mid, int high,int array[], vector<int> &temp)
+void Merge(int low, int mid, int high,int array[], int temp[])
 {
-    temp.clear(); //clearing temporary vector...don't need to do this with array, in array we need to maintain a index variable.
+    int index=0;
     int left=low;
     int right = mid+1;
 
@@ -15,12 +15,14 @@ void Merge(int low, int mid, int high,int array[], vector<int> &temp)
     {
         if(array[left]<= array[right]) 
         {
-            temp.push_back(array[left]);
+            temp[index]=array[left];
+            index++;
             left++;
         }
         else 
         {
-            temp.push_back(array[right]);
+            temp[index] = array[right];
+            index++;
             right++;
         }        
     }
@@ -28,14 +30,16 @@ void Merge(int low, int mid, int high,int array[], vector<int> &temp)
     // condition if only leftside array elements are left
     while(left<=mid)
     {
-        temp.push_back(array[left]);
+        temp[index] = array[left];
+        index++;
         left++;
     }
 
     // condition if only right array elements are left
     while(right<=high)
     {
-        temp.push_back(array[right]);
+        temp[index] = array[right];
+        index++;
         right++;
     }
 
@@ -44,7 +48,7 @@ void Merge(int low, int mid, int high,int array[], vector<int> &temp)
     for(int i=low; i<=high;i++) array[i] = temp[i-low];
 }
 
-void MergeSort(int low, int high, int array[], vector<int> &temp)
+void MergeSort(int low, int high, int array[], int temp[])
 {
     if(low >= high) return;
     int mid = (low+high)/2;
@@ -59,17 +63,17 @@ int main()
     //take arraysize as input
     int arraysize;
     cin >> arraysize; 
-    int array1[arraysize];
-    vector<int> temp;
+    int array[arraysize];
+    int temp[arraysize];
 
     //take input into the array
-    for(int i=0;i<arraysize;i++) cin >> array1[i];
+    for(int i=0;i<arraysize;i++) cin >> array[i];
 
     //call the mergesort function
-    MergeSort(0,arraysize-1,array1,temp);
+    MergeSort(0,arraysize-1,array,temp);
 
     //print the sorted array
-    for(int i=0;i<arraysize;i++)  cout << array1[i] << " ";
+    for(int i=0;i<arraysize;i++)  cout << array[i] << " ";
 
     return 0;
 }
