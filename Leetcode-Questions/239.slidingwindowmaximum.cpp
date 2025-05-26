@@ -1,3 +1,5 @@
+// Leetcode Question 239: Sliding Window Maximum
+// This can be solved with deque and monotonic queue approach
 class Solution {
 public:
     vector<int> maxSlidingWindow(vector<int>& nums, int k) {

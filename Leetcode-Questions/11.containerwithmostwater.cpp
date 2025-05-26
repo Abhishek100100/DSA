@@ -1,9 +1,8 @@
 // Leetcode Question 11: Container With Most Water
+ // This can be solved with two pointer and greedy approach
 class Solution {
 public:
     int maxArea(vector<int>& height) {
-        // This can be solved with two pointer and greedy approach
-
         // step 1 : initialise and declare variables
         int ans=0;
         int left = 0;

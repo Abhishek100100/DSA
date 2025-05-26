@@ -1,4 +1,5 @@
-// 3/3 solution :  This solves the problem in O(n) time and O(1) space
+// Leetcode Question 238: Product of Array Except Self
+// This can be solved with O(1) space and O(n) time complexity
 class Solution {
 public:
     vector<int> productExceptSelf(vector<int>& nums) {
