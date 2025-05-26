@@ -1,4 +1,4 @@
-// approach 1 : normal implementation with operation function
+// Approach 1 : normal implementation with operation function
 class Solution {
 public:
     int operation(int a, int b, string token)
