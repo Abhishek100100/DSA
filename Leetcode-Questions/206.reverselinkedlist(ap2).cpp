@@ -13,15 +13,25 @@
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-        ListNode* curr = head;
+        // One solution could be to push all elements to stacks and then fill the data
+        // Two optimal approaches - iterative and recursive
+        // Iterative solution
+
+        // Think of it in terms of front, previous and temp and then adjust pointers
+        // Solve for smaller problem first, then expand for larger ones.
+        
+        // if single node is present
+        if(head==NULL) return head;
+        
+        ListNode* temp = head;
         ListNode* prev = NULL;
 
-        while(curr)
+        while(temp!=NULL)
         {
-            ListNode* front = curr->next;
-            curr->next= prev;
-            prev = curr;
-            curr=front;
+            ListNode* front = temp->next;
+            temp->next = prev;
+            prev = temp;
+            temp = front;
         }
         return prev;
     }
