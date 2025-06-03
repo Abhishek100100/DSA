@@ -17,6 +17,10 @@ class Solution {
     c) We will adjust pointers within a while loop 
     */
 
+    // Time and Space complexity(considering auxiliary space for recursion):
+    // O(n) and O(n) respectively, where n is the number of nodes in the linked list.
+    
+
 public:
     ListNode* reverseLL(ListNode* node)
     {
