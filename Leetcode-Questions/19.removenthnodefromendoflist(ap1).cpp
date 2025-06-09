@@ -12,6 +12,7 @@ class Solution {
     /*
     -  There are two approaches to solve this, let's solve with approach 1
     - Approach 1 : two pass solution
+    - The time and space complexity for this approach is O(n) and O(1) respectively, where n is the number of nodes in the linked list.
     */
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
@@ -28,7 +29,7 @@ public:
        //step 2 : find the index of element from start to be deleted
        int ind = size - n ;
 
-       if(ind==0) return head->next;
+       if(ind==0) return head->next; // I can add the node deletion condition, but avoided it for simplicity
        
        // step 3 : move to a node previous to it and then adjust the pointers
        ListNode* prev = head;
