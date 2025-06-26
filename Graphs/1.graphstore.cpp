@@ -17,10 +17,10 @@ public:
     }
     
     // Function to create adjacency matrix
+    // Time and space complexity: O(V^2)
     void createAdjacencyMatrix() 
     { 
         int adjMatrix[vertices + 1][vertices + 1];
-        
         // Initialize matrix with 0s
         for(int i = 0; i <= vertices; i++) {
             for(int j = 0; j <= vertices; j++) {
@@ -48,6 +48,7 @@ public:
     }
     
     // Function to create adjacency list
+    // Time and space complexity: O(V + E)
     void createAdjacencyList() {
         vector<vector<int>> adjList(vertices + 1);
         
@@ -83,6 +84,8 @@ int main() {
     
     //graph.createAdjacencyMatrix();
      graph.createAdjacencyList();
+
+    // note : for weighted graphs, we can modify the adjacency list to store pairs of (vertex, weight)
     
     return 0;
 }
