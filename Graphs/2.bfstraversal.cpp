@@ -12,7 +12,8 @@ step 3 : write a function to display the BFS traversal result
 */
 
 // I wasn't able to compile this code with normal visited array[size] , since the size of the vector is not known at compile time.
-// So, I am using const keyword to declare the size of the vector at runtime.
+// So I am creating a visited bool vector with fixed size
+// this const keyword only exists to keep the passed parameters protected from alterations
 vector<int> bfsGraph(const vector<vector<int>> &adjList, int vertex)
 {
     int size = adjList.size();
