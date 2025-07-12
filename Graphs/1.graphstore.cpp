@@ -16,8 +16,7 @@ public:
         isDirected = directed;
     }
     
-    // Function to create adjacency matrix
-    // Time and space complexity: O(V^2)
+    // Function to create adjacency matrix || Time and space complexity: O(V^2)
     void createAdjacencyMatrix() 
     { 
         int adjMatrix[vertices + 1][vertices + 1];
