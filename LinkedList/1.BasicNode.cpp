@@ -6,7 +6,7 @@ class Node{
     public: // access modifier
     int data; // the data value
     Node* next; // the pointer to the next value
-    public:
+    
     // constructor
     Node (int data1, Node* next1){
         data=data1;  // Initialize data with the provided value
