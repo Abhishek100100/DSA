@@ -15,7 +15,7 @@ class Solution {
             else if(flag<target) left++;
             else right--;
         }
-        
+
         return false;
     }
 };
