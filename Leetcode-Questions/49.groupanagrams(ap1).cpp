@@ -1,4 +1,5 @@
 // Approach 1 : Based on sorting and hashing
+// Time and Space Complexity : O(n * k log k) where n is the number of strings and k is the maximum length of a string
 class Solution {
 public:
     vector<vector<string>> groupAnagrams(vector<string>& strs) {

@@ -1,4 +1,3 @@
-// Approach 2 : Based on frequency count
 class Solution {
 public:
     // Function to generate a frequency key for each string
@@ -7,23 +6,26 @@ public:
         for (char c : s) {
             count[c - 'a']++;
         }
+
         string key;
         for (int i = 0; i < 26; ++i) {
-            key += '#' + to_string(count[i]);
+            key += 'A' + to_string(count[i]);
         }
         return key;
     }
 
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
+        // map for hashing the characters
         unordered_map<string, vector<string>> mpp;
-        for (const string& s : strs) {
+        
+        for (auto s : strs) {
             string key = getFrequencyKey(s);
             mpp[key].push_back(s);
         }
 
         vector<vector<string>> ans;
-        for (auto& pair : mpp) {
-            ans.push_back(pair.second);
+        for (auto it : mpp) {
+            ans.push_back(it.second);
         }
         return ans;
     }

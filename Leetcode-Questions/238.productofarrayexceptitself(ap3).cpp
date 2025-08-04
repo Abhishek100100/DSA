@@ -8,6 +8,7 @@ public:
         int product=1;
         int n = nums.size();
 
+        // we know that result[i] = product of all elements on left * product of all elements on right
         // step 1 : form the left product array
         if(n<1) return output;
         for(auto it : nums) 
