@@ -27,6 +27,7 @@ public:
             }
         }
         
+        // Populating the adjacency matrix
         for(int i = 0; i < edges; i++) {
             int u, v;
             cin >> u >> v;
@@ -46,8 +47,7 @@ public:
         }
     }
     
-    // Function to create adjacency list
-    // Time and space complexity: O(V + E)
+    // Function to create adjacency list | Time and space complexity: O(V + E)
     void createAdjacencyList() {
         vector<vector<int>> adjList(vertices + 1);
         
@@ -74,17 +74,18 @@ public:
 };
 
 int main() {
+    // Taking number of vertices and edges as input
     int n, m;
     cin >> n >> m;
     
     bool directed = false;
     
+    // Since I have made an class for graph, here I am making an object of that class
     Graph graph(n, m, directed);
     
     //graph.createAdjacencyMatrix();
      graph.createAdjacencyList();
 
     // note : for weighted graphs, we can modify the adjacency list to store pairs of (vertex, weight)
-    
     return 0;
 }

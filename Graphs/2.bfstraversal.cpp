@@ -22,8 +22,9 @@ vector<int> bfsGraph(const vector<vector<int>> &adjList, int vertex)
     queue<int> q;
     
     q.push(vertex); // initialising with starting vertex
-    visited[vertex]=1;
+    visited[vertex]=1; // marking the starting vertex as visited
 
+    
     while(!q.empty())
     {
         auto node = q.front();
@@ -56,7 +57,7 @@ int main()
     int vertices, edges, isDirected = 0; 
     cout << "Enter number of vertices and edges: ";
     cin >> vertices >> edges;
-    adjList.resize(vertices + 1); 
+    adjList.resize(vertices + 1); // Resize the adjacency list to accommodate vertices from 1 to n
 
     cout << "Enter edges (u v):\n";
     for(int i = 0; i < edges; i++) {
