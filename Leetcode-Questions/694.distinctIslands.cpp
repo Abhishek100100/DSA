@@ -1,5 +1,4 @@
-// User function Template for C++
-
+// Leetcode 694 : 
 class Solution {
   private:
   void dfs(int row, int col, int rowBase, int colBase,int rowSize,int colSize, vector<vector<int>>& grid,vector<vector<int>> &visited, vector<pair<int,int>> &island  )
