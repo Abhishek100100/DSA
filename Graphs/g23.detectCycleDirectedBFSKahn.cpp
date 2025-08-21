@@ -10,6 +10,7 @@ class Solution {
         // step 1 : declare variables and misc
         vector<vector<int>> adjList(V);
         vector<int> indegree(V,0);
+        
         vector<int> toposort;
         queue<int> q;
         
