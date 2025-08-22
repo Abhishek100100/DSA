@@ -16,13 +16,17 @@ class DisjointSet
         rank.resize(n+1,0);
         size.resize(n+1,0);
 
-        for (int i = 0; i <= n; i++) {
+        // making the parent of each node to itself
+        for (int i = 1; i <= n; i++) {
             parent[i] = i;
+            size[i]=1;
         }
     }
 
     int findUltimateParent(int node)
     {
+        // here we are doing path compression
+        // we do this by recursively calling the function until we reach the ultimate parent
         if (parent[node] == node) return node;
         return parent[node] = findUltimateParent(parent[node]);
     }
