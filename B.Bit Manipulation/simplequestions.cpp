@@ -48,6 +48,7 @@ void isPowerOfTwo(int num) {
 }
 
 // 8. Check if Number is Odd or Even
+// this works because in binary representation, odd numbers have their least significant bit set to 1
 void oddOrEven(int num) {
     if ( (num & 1) == 1 )
         cout << "odd" << endl;
@@ -69,6 +70,7 @@ int builtinCountSetBits(int num) {
 int manualCountSetBits(int num) {
     int count = 0;
     while (num != 0) {
+        // other way to do this is with 
         num = num & (num - 1);
         count++;
     }
