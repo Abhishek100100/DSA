@@ -1,7 +1,6 @@
 // Merge Sort
 // it is a divide and conquer algorithm that divides the input array into two halves, calls itself
 // time and space complexity of O(n log n) and O(n) respectively.
-// Youtube : https://www.youtube.com/watch?v=3j0SWDX4AtU
 
 #include <iostream>
 #include <vector>
