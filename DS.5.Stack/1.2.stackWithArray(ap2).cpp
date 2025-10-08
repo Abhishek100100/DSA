@@ -1,10 +1,12 @@
 #include<bits/stdc++.h>
 
 using namespace std;
-class Stack {
+class Stack 
+{
   int size;
   int * arr;
   int top;
+  
   public:
     Stack() {
       top = -1;

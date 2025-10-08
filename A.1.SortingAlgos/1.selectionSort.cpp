@@ -1,7 +1,7 @@
 // Selection sort :
 // it is an in-place comparison sorting algorithm with time and space complexity of O(n^2) and O(1) respectively.
 // the basic logic is to pick each element, and then go over the array to find the smallest element and swap it with the picked element.
-// real-life example : sorting playing cards in your hand
+// real-life example : sorting playing cards in your hand, you pick one card and then go over the rest of the cards to find the smallest card and place it at the beginning of your hand.
 
 #include <bits/stdc++.h> // for including all standard libraries
 #include<iostream>
