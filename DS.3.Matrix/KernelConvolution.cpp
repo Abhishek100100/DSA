@@ -14,7 +14,7 @@ vector<vector<int>> convolve(const vector<vector<int>>& image,
 
     // Calculate padding needed for the output image to have the same dimensions as the input
     // This assumes an odd-sized kernel
-    int padHeight = kernelHeight / 2;
+    int padHeight = kernelHeight / 2; 
     int padWidth = kernelWidth / 2;
 
     // Initialize output image with zeros
